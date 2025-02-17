@@ -1,7 +1,7 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 5,
+  "height": 44,
   "spacing": 5,
   "margin-top": 5,
   "margin-right": 8,
@@ -10,13 +10,13 @@
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#f5c2e7'>  </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
     "clock": {
         "timezone": "Europe/Ljubljana",
-        "format": "   {:%b %d %H:%M}",
+        "format": "  {:%b %d %H:%M}",
         "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "interval": 60
@@ -45,7 +45,7 @@
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
+      "format": "{icon} {volume}%",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]
@@ -56,8 +56,8 @@
   "hyprland/workspaces": {
 	  "format": "{icon}",
 	  "format-icons": {
-		  "default": "●",
-		  "active": "●"
+		  "default": "⬡",
+		  "active": "⬢"
 	  }
   }
 

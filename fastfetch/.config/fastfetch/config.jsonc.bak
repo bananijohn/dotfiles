@@ -2,7 +2,7 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "file",
-        "source": "~/fatfetchlogos/bedrock.txt",
+        "source": "~/fastfetchlogos/bedrock.txt",
         "color": {
             "1": "38;2;242;205;205",
             "2": "38;2;242;205;205",
@@ -23,98 +23,104 @@
         "break",
         {
             "type": "custom",
-            "format": "╔═════════════════════ Hardware ═════════════════════╗",
+            "format": "┌──────────────── Hardware ────────────────┐",
             "outputColor": "38;2;242;205;205"
         },
         {
             "type": "title",
-            "key": "║ Specs",
+            "key": " PC",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "cpu",
-            "key": "║ ╠CPU",
+            "key": "│ ├󰍛CPU",
             "showPeCoreCount": true,
             "format": "{1}",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "gpu",
-            "key": "║ ╠󰍛 GPU",
+            "key": "│ ├󰍛 GPU",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "memory",
-            "key": "║ ╚󰍛 Memory",
+            "key": "└ └󰍛 Memory",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "custom",
-            "format": "╚════════════════════════════════════════════════════╝",
+            "format": "└──────────────────────────────────────────┘",
             "outputColor": "38;2;242;205;205"
         },
         "break",
         {
             "type": "custom",
-            "format": "╔═════════════════════ Software ═════════════════════╗",
+            "format": "┌──────────────── Software ────────────────┐",
             "outputColor": "38;2;242;205;205"
         },
         {
             "type": "os",
-            "key": "║ OS",
+            "key": " OS",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "kernel",
-            "key": "║ ╠ Kernel",
+            "key": "│ ├ Kernel",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "packages",
-            "key": "║ ╠󰏖 Packages",
+            "key": "│ ├󰏖 Packages",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "shell",
-            "key": "║ ╠ Shell",
+            "key": "│ ├ Shell",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "command",
-            "key": "║ ╠ OS Age",
+            "key": "│ ├ OS Age",
             "keyColor": "38;2;242;205;205",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": "║ ╠ Uptime",
+            "key": "└ └ Uptime",
             "keyColor": "38;2;242;205;205"
         },
+        "break",
         {
             "type": "de",
             "key": " DE",
             "keyColor": "38;2;242;205;205"
         },
         {
+            "type": "lm",
+            "key": "│ ├ LM",
+            "keyColor": "38;2;242;205;205"
+        },
+        {
             "type": "wm",
-            "key": "║ ╠ WM",
+            "key": "│ ├ WM",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "gpu",
-            "key": "║ ╚󰍛 GPU Driver",
+            "key": "│ ├󰍛 GPU Driver",
             "format": "{3}",
             "keyColor": "38;2;242;205;205"
         },
         {
             "type": "wmtheme",
-            "key": "╚ ╚󰉼 Theme",
+            "key": "└ └󰉼 Theme",
             "keyColor": "38;2;242;205;205"
         },
 
         {
             "type": "custom",
-            "format": "╚════════════════════════════════════════════════════╝",
+            "format": "└─────────────────────────────────────────┘",
             "outputColor": "38;2;242;205;205"
         },
         {

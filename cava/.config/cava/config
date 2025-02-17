@@ -29,8 +29,8 @@
  bar_height = 32
 
 # For SDL width and space between bars is in pixels, defaults are:
- bar_width = 20
- bar_spacing = 5
+ bar_width = 1
+ bar_spacing = 0
 
 # sdl_glsl have these default values, they are only used to calculate max number of bars.
  bar_width = 1
@@ -230,7 +230,6 @@ gradient = 1
 gradient_color_1 = '#181825'
 gradient_color_2 = '#f2cdcd'
 gradient_color_3 = '#f2cdcd'
-
 
 
 [smoothing]
