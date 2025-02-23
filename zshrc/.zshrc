@@ -100,6 +100,10 @@ plugins=(git archlinux)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias boxcreate="distrobox create"
+alias boxstop="distrobox stop"
+alias boxrm="distrobox rm"
+alias boxenter="distrobox enter"
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

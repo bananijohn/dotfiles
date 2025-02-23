@@ -22,17 +22,22 @@ set $term kitty
 # Your preferred application launcher
 set $menu wofi --show drun
 # File manager
-set $filemanager dolphin
+set $filemanager thunar
+# Browser
+set $browser zen-browser
 
 #
 # Things that start on login:
 #
 
-exec swaymsg "workspace 1; exec firefox;"
-exec swaymsg "workspace 2; exec $term;"
+exec swaymsg "workspace 1; exec $browser;"
+exec swaymsg "workspace 2; exec $term cava;"
 exec swaymsg "workspace 3; exec vesktop;"
+exec swaymsg "workspace 4; exec $term;"
 exec waybar
 exec hyprpaper
+exec nwglook -a
+exec autotiling-rs
 
 
 # Keyboard layout
@@ -45,12 +50,17 @@ input * {
 
 # Window colors
 
-client.focused $flamingo $base $text $flamingo $flamingo
-client.focused_inactive $overlay0 $base $text $flamingo $flamingo
-client.unfocused $overlay0 $base $text $flamingo $flamingo
+client.focused $flamingo $flamingo $text $flamingo $flamingo
+client.focused_inactive $base $text $text $base $base
+client.unfocused $base $base $text $base $base
 
-# Round borders
+# Miscellanious
 
+default_border pixel 2
+corner_radius 2
+shadows enable
+gaps inner 4
+gaps outer 4
 
 ### Output configuration
 #
@@ -99,7 +109,7 @@ output HDMI-A-1 scale 1.5
     bindsym $mod+c kill
 
     # Start your launcher
-    bindsym $mod+Return exec $menu
+    bindsym $mod+Space exec $menu
 
     # Start your file manager
 
@@ -116,7 +126,7 @@ output HDMI-A-1 scale 1.5
     bindsym $mod+Ctrl+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+q exec swaymsg exit
 #
 # Moving around:
 #
@@ -191,7 +201,7 @@ output HDMI-A-1 scale 1.5
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+Ctrl+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -202,11 +212,11 @@ output HDMI-A-1 scale 1.5
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+comma move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+comma scratchpad show
 #
 # Resizing containers:
 #
@@ -236,12 +246,10 @@ output HDMI-A-1 scale 1.5
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with hyprshot
+    # Take a screenshot with hyprshot
     bindsym $mod+Shift+s exec hyprshot -m region --clipboard-only -z
     # Rofimoji
-    bindsym $mod+comma exec rofimoji
-    # Disabling title bar
-    default_border none
+    bindsym $mod+period exec rofimoji
 
 #
 # Status Bar:
