@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export LIBVA_DRIVER_NAME=nvidia
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export NVD_BACKEND=direct
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+sway --unsupported-gpu

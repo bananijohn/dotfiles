@@ -37,6 +37,7 @@ exec swaymsg "workspace 4; exec $term;"
 exec waybar
 exec hyprpaper
 exec nwglook -a
+exec /usr/lib/polkit-kde-authentication-agent-1
 exec autotiling-rs
 
 
