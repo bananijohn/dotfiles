@@ -52,16 +52,16 @@ input * {
 # Window colors
 
 client.focused $flamingo $flamingo $text $flamingo $flamingo
-client.focused_inactive $base $text $text $base $base
-client.unfocused $base $base $text $base $base
+client.focused_inactive $overlay0 $text $text $base $base
+client.unfocused $overlay0 $base $text $base $base
 
 # Miscellanious
 
 default_border pixel 2
-corner_radius 2
+corner_radius 6
 shadows enable
-gaps inner 4
-gaps outer 4
+gaps inner 10
+gaps outer 6
 
 ### Output configuration
 #
@@ -115,6 +115,14 @@ output HDMI-A-1 scale 1.5
     # Start your file manager
 
     bindsym $mod+e exec $filemanager
+
+    # Start your browser
+    
+    bindsym $mod+f exec $browser
+
+    # Start Vesktop
+
+    bindsym $mod+d exec vesktop
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
