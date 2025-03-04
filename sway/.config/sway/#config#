@@ -247,7 +247,7 @@ output HDMI-A-1 scale 1.5
 # Utilities:
 #
     # Take a screenshot with hyprshot
-    bindsym $mod+Shift+s exec hyprshot -m region --clipboard-only
+    bindsym $mod+Shift+s exec hyprshot -m region --clipboard-only -z
     # Rofimoji
     bindsym $mod+period exec rofimoji
     # Idk sound things
